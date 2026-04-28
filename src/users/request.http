@@ -15,11 +15,18 @@ GET http://localhost:3000/auth/1
 GET http://localhost:3000/auth?email=user@example.com
 
 
-#### Update a user
-PATCH http://localhost:3000/auth/1
+### sign in a user
+POST http://localhost:3000/auth/signin
 Content-Type: application/json
 
 {
-  "email": "updated@example.com"
-  
+  "email": "user2@example.com",
+  "password": "password123"
 }
+### sign out a user
+POST http://localhost:3000/auth/signout
+
+### whoami
+GET http://localhost:3000/auth/whoami
+
+
