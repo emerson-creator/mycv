@@ -3,6 +3,7 @@ import {
   Controller,
   Delete,
   Get,
+  HttpCode,
   NotFoundException,
   Param,
   ParseIntPipe,
@@ -40,6 +41,7 @@ export class UsersController {
   }
 
   @Post('signin')
+  @HttpCode(200)
   async signin(@Body() userData: CreateUserDto, @Session() session: any) {
     const user = await this.authService.signin(
       userData.email,
