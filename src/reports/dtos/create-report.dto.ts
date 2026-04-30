@@ -8,6 +8,9 @@ import {
 } from 'class-validator';
 export class CreateReportDto {
   @IsString()
+  title: string;
+
+  @IsString()
   make: string;
 
   @IsString()
