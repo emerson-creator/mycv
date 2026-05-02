@@ -12,6 +12,9 @@ export class Report {
   @Column()
   title: string;
 
+  @Column({ default: false })
+  approved: boolean;
+
   @Column()
   make: string;
 
@@ -29,4 +32,7 @@ export class Report {
 
   @Column()
   mileage: number;
+
+  @Column({ default: 0 })
+  price: number;
 }

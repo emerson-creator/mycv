@@ -13,6 +13,51 @@ Content-Type: application/json
 
 }
 
+### Report sample 2
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+  "title": "Toyota Camry LE",
+  "make": "Toyota",
+  "model": "Camry",
+  "year": 2018,
+  "mileage": 42000,
+  "price": 16500,
+  "lat": 37.7810,
+  "lng": -122.4050
+}
+
+### Report sample 3
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+  "title": "Honda Civic EX",
+  "make": "Honda",
+  "model": "Civic",
+  "year": 2019,
+  "mileage": 30000,
+  "price": 17500,
+  "lat": 37.7600,
+  "lng": -122.4350
+}
+
+### Report sample 4
+POST http://localhost:3000/reports
+Content-Type: application/json
+
+{
+  "title": "Toyota Camry XLE",
+  "make": "Toyota",
+  "model": "Camry",
+  "year": 2021,
+  "mileage": 12000,
+  "price": 23000,
+  "lat": 37.7920,
+  "lng": -122.4300
+}
+
 ### Sign up a new user
 POST http://localhost:3000/auth/signup 
 Content-Type: application/json
@@ -21,3 +66,14 @@ Content-Type: application/json
   "email": "user@example.com",
   "password": "password123"
 }
+
+### Aprove a report
+PATCH http://localhost:3000/reports/4
+Content-Type: application/json
+
+{
+  "approved": false
+}
+
+### Get estimates
+GET http://localhost:3000/reports?make=Toyota&model=Camry&year=2020&lat=37.7749&lng=-122.4194&mileage=15000&title=Toyota%20Camry

@@ -30,6 +30,9 @@ export class User {
     console.log(`User with ID ${this.id} has been updated.`);
   }
 
+  @Column({ default: true })
+  isAdmin: boolean;
+
   @AfterRemove()
   logRemove() {
     console.log(`User with ID ${this.id} has been removed.`);
